@@ -1,0 +1,32 @@
+.title{
+    background-image: linear-gradient(lightblue,lightgreen);
+    font-family: cursive;
+    margin-top: 0px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    height: 100px;
+    box-shadow: 20px 10px 18px red;
+    }
+.header{
+font-size: 15px;
+color: red;
+}
+#subheader{
+font-size: 20px;
+}
+.footer{
+text-align: center;
+background-color: lightcoral;
+font-family: cursive;
+width: 100%;
+position: absolute;
+bottom: 0px;
+color: black;
+}
+canvas{
+box-shadow: 30px 20px 20px blue;
+position: absolute;
+right: 300;
+bottom: 80;
+border: 5px dotted green;
+}
