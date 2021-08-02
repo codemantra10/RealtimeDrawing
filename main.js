@@ -1,3 +1,11 @@
+noseX="";
+noseY="";
+leftwristX="";
+leftwristY="";
+rightwristX="";
+rightwristY="";
+difference="";
+//To determine it is 0 pose nose X and same with noseY
 function setup(){
 canvas=createCanvas(500,500);
 video=createCapture(VIDEO);
@@ -11,7 +19,8 @@ function draw(){
 background("#00ffe5");
 //The function fill in this case gives you the color of the square
 fill("#00ff00");
-square(30, 20, 55);
+square(noseX, noseY, difference);
+document.getElementById("length").innerHTML=difference;
 }
 function preload(){
 
@@ -22,5 +31,13 @@ console.log("Haha you model is working but sorry to do this though:hahadfjrjgktg
 function GotPoses(result){
 if(result.length>0){
 console.log(result);
+noseX=result[0].pose.nose.x;
+noseY=result[0].pose.nose.y;
+leftwristX=result[0].pose.leftWrist.x;
+leftwristY=result[0].pose.leftWrist.y;
+rightwristX=result[0].pose.rightWrist.x;
+rightwristY=result[0].pose.rightWrist.y;
+difference=leftwristX-rightwristX;
+difference=Math.floor(difference);
 }
 }
